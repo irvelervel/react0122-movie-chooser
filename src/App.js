@@ -1,7 +1,8 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Col, Container, Row, Form, Card } from 'react-bootstrap'
+import { Col, Container, Row, Form } from 'react-bootstrap'
 import { Component } from 'react'
+import MovieDetail from './components/MovieDetail'
 
 class App extends Component {
   state = {
@@ -35,19 +36,7 @@ class App extends Component {
             </Row>
             <Row className="justify-content-center mt-3">
               <Col xs={12} md={6}>
-                <Card>
-                  <Card.Img
-                    variant="top"
-                    src="http://placekitten.com/300/300"
-                  />
-                  <Card.Body className="text-dark">
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
+                <MovieDetail selectedMovie={this.state.movieTitle} />
               </Col>
             </Row>
           </Container>
